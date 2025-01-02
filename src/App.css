@@ -1,3 +1,10 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
 @font-face {
   font-family: 'Inconsolata'; /* Match this with your Tailwind config */
   src: url('./assets/fonts/Inconsolata-VariableFont_wdth,wght.ttf') format('truetype'); /* Ensure path matches */
