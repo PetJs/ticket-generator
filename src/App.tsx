@@ -47,6 +47,14 @@ function App() {
     multiple: false
   });
 
+  const removeAvatar = () => {
+    setFiles([]);
+  };
+
+  const changeAvatar =() => {
+    open()
+  }
+
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     // Handle file upload logic here if needed
@@ -77,12 +85,20 @@ function App() {
         </div>
 
         {/* Form with overflow handling */}
-        <form onSubmit={handleSubmit} className="text-white border flex flex-col justify-center w-80 md:w-96 absolute left-1/2 transform -translate-x-1/2 p-3  ">
+        <form onSubmit={handleSubmit} className="text-white  flex flex-col justify-center w-80 md:w-96 absolute left-1/2 transform -translate-x-1/2 p-3  ">
           <div className="w-full">
             <p>Upload Avatar</p>
-            <div {...getRootProps()} className="cursor-pointer bg-gray-700 opacity-50 rounded border-dashed border-2 p-2">
+            <div {...getRootProps()} className="cursor-pointer bg-gray-700 bg-opacity-50 rounded-lg border-dashed border-2 p-2">
               <input {...getInputProps()} />
-              {isDragActive ? (
+              {files.length > 0 ? (
+                <div className="flex flex-col justify-center items-center ">
+                  <img src={files[0].preview} alt="preview avatar" className="w-12 rounded-xl " />
+                  <div className="flex gap-2 mt-4">
+                    <button onClick={removeAvatar} className="bg-gray-500 rounded md:rounded-lg text-[16px] md:text-sm px-0.5">Remove image</button>
+                    <button onClick={changeAvatar} className="bg-gray-500 rounded md:rounded-lg text-[16px] md:text-sm px-0.5">Change Image</button>
+                  </div>
+                </div>
+              ) : isDragActive ? (
                 <p>Drop the files here ...</p>
               ) : (
                 <div className="flex flex-col items-center">
@@ -91,12 +107,6 @@ function App() {
                 </div>
               )}
             </div>
-            <ul>
-              {files.map((file) => (
-                <li key={file.name}><img src={file.preview} alt="" /></li>
-              ))}
-            </ul>
-            {/* Content that may overflow */}
             <div className="overflow-auto">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet neque voluptas placeat consequatur cum quisquam blanditiis unde totam! Aliquam quisquam natus voluptatum mollitia doloremque! Distinctio aspernatur a illum nesciunt nemo?
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, ullam numquam. Deleniti beatae velit architecto! Provident nemo eaque error necessitatibus cumque tempora. Accusamus harum deserunt, minima facere earum ad sequi.
