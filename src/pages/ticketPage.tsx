@@ -81,7 +81,7 @@ function TicketPage() {
             </div> 
           </div>
           <div className="absolute bottom-0 left-0 w-full p-6 flex items-center gap-2">
-            {avatar && <img src={avatar} alt="Avatar" className="w-12 rounded-lg" />}
+            {avatar && <img src={avatar} alt="Avatar" className="w-12 h-12 rounded-lg" />}
             <div className="font-inconsolata">
               <p className="text-lg">{name}</p>
               <div className="flex gap-2">
