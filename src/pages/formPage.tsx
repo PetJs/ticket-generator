@@ -151,7 +151,7 @@ function FormPage() {
                 <p>Drop the files here ...</p>
               ) : (
                 <div className="flex flex-col items-center">
-                  <img src={iconUpload} alt="" className="w-12"/>
+                  <img src={iconUpload} alt="" className="w-12 h-12"/>
                   <p>Drag and drop or click to upload</p>
                 </div>
               )}
