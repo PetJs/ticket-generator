@@ -20,7 +20,7 @@ The designs were created to the following widths:
 - Orange 500: #f57261
 - Orange 700: hsl(7, 71%, 60%)
 
-- Gradient (text): hsl(7, 86%, 67%) to hsl(0, 0%, 100%)
+- Gradient (text): #f37362 to #ffffff
 
 ## Typography
 

@@ -18,4 +18,10 @@ export interface FormData {
     email: string;
     github: string;
     avatar?: File;
-  }
+}
+
+export interface DateLocation {
+    month: string;
+    year: number;
+    location: string;
+}
