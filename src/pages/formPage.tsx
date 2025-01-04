@@ -141,7 +141,7 @@ function FormPage() {
               <input {...getInputProps()} />
               {files.length > 0 ? (
                 <div className="flex flex-col justify-center items-center ">
-                  <img src={files[0].preview} alt="preview avatar" className="w-12 rounded-xl " />
+                  <img src={files[0].preview} alt="preview avatar" className="w-12 h-12 rounded-xl " />
                   <div className="flex gap-2 mt-4">
                     <button onClick={removeAvatar} className="bg-gray-500 rounded md:rounded-lg text-[16px] md:text-sm px-0.5">Remove image</button>
                     <button onClick={changeAvatar} className="bg-gray-500 rounded md:rounded-lg text-[16px] md:text-sm px-0.5">Change Image</button>
@@ -151,7 +151,7 @@ function FormPage() {
                 <p>Drop the files here ...</p>
               ) : (
                 <div className="flex flex-col items-center">
-                  <img src={iconUpload} alt="" className="w-12 h-12"/>
+                  <img src={iconUpload} alt="" className="w-12"/>
                   <p>Drag and drop or click to upload</p>
                 </div>
               )}
