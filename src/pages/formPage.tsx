@@ -62,7 +62,7 @@ function FormPage() {
       'image/png': [],
       'image/gif': []
     }, // Allow only image files
-    maxSize: 500000, // 500 KB (500,000 bytes)
+    maxSize: 5000000, // 5 MB (5,000,000 bytes)
     multiple: false
   });
 
@@ -159,7 +159,7 @@ function FormPage() {
             {error.avatar ? (
               <div className="flex gap-2 mb-4 text-red">
                 <img src={iconInfo} alt="" className="text-red" />
-                <p className="text-[14px] md:text-sm font-inconsolata"> Upload your photo (JPG or PNG, max size: 500KB)</p>
+                <p className="text-[14px] md:text-sm font-inconsolata"> Upload your photo (JPG or PNG, max size: 5MB)</p>
               </div>
             ): (
               <div className="flex gap-2 mb-4">
